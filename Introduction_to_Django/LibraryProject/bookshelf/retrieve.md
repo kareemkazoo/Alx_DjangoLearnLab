@@ -3,11 +3,7 @@
 ```python
 from bookshelf.models import Book
 
-# عرض كل الكتب في قاعدة البيانات
-Book.objects.all()
-```
+# جلب الكتاب باستخدام get
+book = Book.objects.get(title="1984")  # لازم يكون نفس العنوان اللي استخدمته عند الإنشاء
+book
 
-**Expected Output:**
-```
-<QuerySet [<Book: 1984>]>
-```
